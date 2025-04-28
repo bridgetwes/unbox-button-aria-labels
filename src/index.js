@@ -3,6 +3,7 @@ import { createHigherOrderComponent } from '@wordpress/compose';
 import { InspectorControls } from '@wordpress/block-editor';
 import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
+import { escapeAttribute } from '@wordpress/escape-html';
 
 const withAriaLabelControls = createHigherOrderComponent((BlockEdit) => {
     return (props) => {
@@ -100,7 +101,7 @@ const modifyButtonSave = (element, blockType, attributes) => {
                     ...child,
                     props: {
                         ...child.props,
-                        'aria-label': ariaLabel || undefined,
+                        'aria-label': ariaLabel ? escapeAttribute(ariaLabel) : undefined,
                         'aria-hidden': hideFromScreenReaders ? 'true' : undefined
                     }
                 };
