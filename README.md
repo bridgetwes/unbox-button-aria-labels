@@ -1,4 +1,4 @@
-# Unbox Button ARIA Label
+# Unbox Button ARIA Labels
 
 A WordPress plugin that extends the core button block to add ARIA label support and screen reader visibility control.
 
@@ -20,7 +20,7 @@ A WordPress plugin that extends the core button block to add ARIA label support 
 
 1. Add a button block to your page or post
 2. In the block settings sidebar, you'll find a new "Accessibility Settings" panel
-3. Add an ARIA label to provide a descriptive text for screen readers
+3. Add an ARIA label to provide a descriptive text for screen readers (note, this will be read by screen readers in place of your link text.)
 4. Toggle the "Hide from Screen Readers" option to control screen reader visibility
 
 ## Development
@@ -32,7 +32,7 @@ A WordPress plugin that extends the core button block to add ARIA label support 
 
 ## Requirements
 
-- WordPress 5.8 or higher
+- WordPress 6.7 or higher
 - Node.js 14.0 or higher
 - npm 6.0 or higher
 
