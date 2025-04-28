@@ -1,0 +1,43 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - '*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Install Composer Dependencies
+      run: composer install --no-dev --optimize-autoloader
+    
+    - name: Create Zip
+      run: |
+        zip -r unbox-button-aria-labels.zip . -x "*/node_modules/*" "*.git*" ".github/*" ".DS_Store" "composer.json" "composer.lock" "package.json" "package-lock.json" 2>/dev/null || :
+      
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
+        
+    - name: Upload Release Asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./unbox-button-aria-labels.zip
+        asset_name: unbox-button-aria-labels.zip
+        asset_content_type: application/zip 
