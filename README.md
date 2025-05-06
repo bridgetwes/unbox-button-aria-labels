@@ -2,6 +2,12 @@
 
 A WordPress plugin that extends the core button block to add ARIA label support and screen reader visibility control.
 
+## Version
+- 1.0.3 5/6/2025 updating npm
+- 1.0.2 4/28/2025 adjusting readme.md files
+- 1.0.1 4/28/2025 escape aria output in attributes
+- 1.0.0 4/28/2025 Initial Commit
+
 ## Features
 
 - Add custom ARIA labels to button blocks
@@ -13,8 +19,6 @@ A WordPress plugin that extends the core button block to add ARIA label support 
 1. Download the plugin files
 2. Upload the plugin folder to the `/wp-content/plugins/` directory
 3. Activate the plugin through the 'Plugins' menu in WordPress
-4. Run `npm install` to install dependencies
-5. Run `npm run build` to build the JavaScript files
 
 ## Usage
 
@@ -22,13 +26,6 @@ A WordPress plugin that extends the core button block to add ARIA label support 
 2. In the block settings sidebar, you'll find a new "Accessibility Settings" panel
 3. Add an ARIA label to provide a descriptive text for screen readers (note, this will be read by screen readers in place of your link text.)
 4. Toggle the "Hide from Screen Readers" option to control screen reader visibility
-
-## Development
-
-- `npm run start` - Start the development build process
-- `npm run build` - Build the production files
-- `npm run lint:js` - Lint JavaScript files
-- `npm run format` - Format code according to WordPress standards
 
 ## Requirements
 

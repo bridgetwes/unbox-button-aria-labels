@@ -1,10 +1,10 @@
 {
   "name": "unbox-button-aria-label",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "WordPress plugin that extends the button block with ARIA label support",
   "author": "Bridget Wessel",
-	"license": "Proprietary",
-	"main": "build/index.js",
+  "license": "Proprietary",
+  "main": "build/index.js",
   "scripts": {
     "build": "wp-scripts build",
     "start": "wp-scripts start",
@@ -20,6 +20,6 @@
     "test:unit": "wp-scripts test-unit-js"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^26.19.0"
+    "@wordpress/scripts": "^30.15.0"
   }
-} 
+}
