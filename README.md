@@ -3,6 +3,7 @@
 A WordPress plugin that extends the core button block to add ARIA label support and screen reader visibility control.
 
 ## Version
+- 1.0.5 6/25/2025 Updating @wordpress/scripts
 - 1.0.4 6/24/2025 Removing Yahnis-Elsts Updater files from plugin and setting to update with Single Update Plugin
 - 1.0.3 5/6/2025 updating npm
 - 1.0.2 4/28/2025 adjusting readme.md files
